@@ -46,76 +46,82 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 
+} 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 body{
     font-size: 16px;
     line-height: 1.5;
 }
-
-.header , .footer {
-    background-color: darkolivegreen;
-    padding: 23px 0;
-} 
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 32px;
-
 }
-.nav{
-    display: inline-block;
-    vertical-align: middle;
-    float: right;
-}
-
-.nav a{
-    font-size: 24px;
-    text-decoration: none;
-    margin-left: 22px;
-}
-.section{
-    background-color: gray;
-    float: left;
-
-}
-header,section,div,article,footer {
-    padding: 80px;
-    margin: 1.5%;
-    border-radius: 8px;
-}
-.box-left {
-    float: left;
-}
-.box-right {
-    float: right;
-}
-.big-box {
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+} 
+.clearfix::after {
     clear: both;
 }
-.big-box img {
+.header {
+    background-color: #222946;
+    height: 72px;
+    line-height: 72px;
+}
+.brand {
+    float: left;
+}
+.brand img {
+    vertical-align: middle;
+    width: 91px;
+}
+.nav {
+    float: right;
+}
+
+.nav a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 32px;
+}
+.section {
+    padding: 90px 0;
+    background-color: lightslategray;
+}
+.col {
+    float: left;
+    width: 30%;
+    margin: 0 1.5%;
+}
+.img {
     width: 300px;
     height: 168px;
 }
+p{
+    font-size: 20px;
+    margin-top: 24px;
+    line-height: 1.7;
+}
+footer {
+    background-color: darkgreen;
+    padding: 32px;
+    color: aliceblue;
+    text-decoration: none;
+}
 
-.clearfix :: before, .clearfix ::after {
-    content: ;
-    display: table;
+ 
+.footer small {
+    float: left;
 }
-.clearfix ::after {
-    clear: both;
-}
-.p1{
-    overflow: auto;
-    color: cornflowerblue;
-}
-.p2 {
-    overflow: auto;
-    color: black;
-}
-.p3 {
-    overflow: auto;
-    color: brown;
-}
-.small {
-    text-align: center;
-    font-size: 24px;
-    color: blueviolet;
+.footer a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
